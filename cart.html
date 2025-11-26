@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Carrinho - Cozinha de Histórias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-nav"> 
+                <img src="assets/images/logo-restaurante-removebg-preview.png" alt="Logo Cozinha de Histórias">
+                <span>Cozinha de Histórias</span> 
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#cardapio">Cardápio</a></li>
+                <li><a href="index.html#galeria">Galeria</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="icon menu"></button>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html#inicio" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="index.html#cardapio" class="nav-link">Cardápio</a></li>
+                <li class="nav-item"><a href="index.html#galeria" class="nav-link">Galeria</a></li>
+                <li class="nav-item"><a href="index.html#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="cart.html">Carrinho</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <section style="padding: 3rem 20px; text-align: center;">
+        <h1 style="font-size: 2rem; color: var(--primary); margin-bottom: 2rem;">Carrinho de Compras</h1>
+    </section>
+    <main class="cart-container">
+        <div class="cart-grid">
+            <div class="cart-items" id="cart-items">
+                <!-- Itens serão renderizados aqui -->
+            </div>
+            <aside class="cart-summary">
+                <h3>Resumo do Pedido</h3>
+                <p>Subtotal: <strong id="subtotal">R$ 0,00</strong></p>
+                <p>Taxa (0%): <strong id="fee">R$ 0,00</strong></p>
+                <p>Total: <strong id="total">R$ 0,00</strong></p>
+
+                <h4>Forma de Pagamento</h4>
+                <div class="payment-methods">
+                    <label><input type="radio" name="payment" value="pix" checked> PIX</label>
+                    <label><input type="radio" name="payment" value="card"> Cartão de Crédito</label>
+                </div>
+
+                <div id="payment-details" style="margin-top:1rem">
+                    <!-- Campos/ instruções específicos aqui -->
+                </div>
+
+                <button id="finalize-btn" class="btn" style="margin-top:1rem; width:100%">Finalizar Compra</button>
+                <div id="confirmation" style="margin-top:1rem"></div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="cartapp.js"></script>
+    <script>
+        // menuShow local para o cart (toggle do menu mobile)
+        function menuShow() {
+            const menuMobile = document.querySelector('.mobile-menu');
+            if (!menuMobile) return;
+            menuMobile.classList.toggle('open');
+            const icon = document.querySelector('.mobile-menu-icon .icon') || document.querySelector('.icon');
+            if (icon) {
+                if (menuMobile.classList.contains('open')) {
+                    icon.src = 'assets/icon/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg';
+                } else {
+                    icon.src = 'assets/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg';
+                }
+            }
+        }
+        // Fecha o menu mobile quando clicar fora (no cart.html)
+        document.addEventListener('click', function (e) {
+            const menuMobile = document.querySelector('.mobile-menu');
+            const mobileIcon = document.querySelector('.mobile-menu-icon');
+            if (!menuMobile || !mobileIcon) return;
+
+            if (menuMobile.classList.contains('open')) {
+                if (!menuMobile.contains(e.target) && !mobileIcon.contains(e.target)) {
+                    menuMobile.classList.remove('open');
+                    const icon = document.querySelector('.mobile-menu-icon .icon') || document.querySelector('.icon');
+                    if (icon) icon.src = 'assets/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
