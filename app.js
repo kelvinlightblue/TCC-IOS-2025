@@ -53,36 +53,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Formulário de reserva
-    const reservationForm = document.getElementById('reservation-form');
-
-    if (reservationForm) {
-        reservationForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Coleta os dados do formulário
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            const date = formData.get('date');
-            const time = formData.get('time');
-            const guests = formData.get('guests');
-            const message = formData.get('message');
-
-            // Validação básica
-            if (!name || !email || !phone || !date || !time || !guests) {
-                alert('Por favor, preencha todos os campos obrigatórios.');
-                return;
-            }
-
-            // Simulação de envio (em um caso real, enviaria para um servidor)
-            alert(`Obrigado, ${name}! Sua reserva para ${guests} pessoas no dia ${date} às ${time} foi recebida. Entraremos em contato para confirmação.`);
-
-            // Limpa o formulário
-            this.reset();
-        });
-    }
+    // O tratamento do formulário de reserva foi movido para a página específica
+    // `reserva.html` onde existe um script que mostra confirmação visível.
+    // Evita conflito de múltiplos handlers para o mesmo formulário.
 
     // Animação de scroll suave para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

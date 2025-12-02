@@ -44,7 +44,7 @@
         </section>
         <section class="container-formulario">
             <div class="contact-form">
-                <form class="reservation-form">
+                <form class="reservation-form" id="reservation-form">
                     <div class="form-group">
                         <label for="name">Nome Completo</label>
                         <input type="text" id="name" name="name" required>
@@ -75,10 +75,47 @@
                     </div>
                     <button type="submit" class="btn">Enviar Reserva</button>
                 </form>
-            <div id="confirmation"></div>
+            <div id="confirmation" aria-live="polite"></div>
             </div>
         </section>
     </main>
+
+    <script>
+        (function(){
+            const form = document.getElementById('reservation-form');
+            const confirmationEl = document.getElementById('confirmation');
+
+            function showConfirmation(name, guests, date, time) {
+                confirmationEl.innerHTML = `\n                    <div class="reservation-confirmation" role="status">\n                        <strong>Reserva recebida!</strong> Obrigado, ${name}.\n                        Reserva para <strong>${guests}</strong> pessoa(s) em <strong>${date}</strong> às <strong>${time}</strong>.\n                    </div>`;
+                // remove after 5s
+                setTimeout(() => { confirmationEl.innerHTML = ''; }, 5000);
+            }
+
+            if (form) {
+                form.addEventListener('submit', function(e){
+                    e.preventDefault();
+
+                    const name = form.querySelector('#name')?.value.trim() || '';
+                    const email = form.querySelector('#email')?.value.trim() || '';
+                    const phone = form.querySelector('#phone')?.value.trim() || '';
+                    const date = form.querySelector('#date')?.value || '';
+                    const time = form.querySelector('#time')?.value || '';
+                    const guests = form.querySelector('#guests')?.value || '';
+
+                    if (!name || !email || !phone || !date || !time || !guests) {
+                        // simple validation
+                        confirmationEl.innerHTML = '<div class="reservation-error">Por favor, preencha todos os campos obrigatórios.</div>';
+                        setTimeout(() => { confirmationEl.innerHTML = ''; }, 3000);
+                        return;
+                    }
+
+                    // Simula envio (aqui você integraria com backend)
+                    showConfirmation(name, guests, date, time);
+                    form.reset();
+                });
+            }
+        })();
+    </script>
 
     <footer>
         <div class="footer-content">
