@@ -16,7 +16,7 @@
             <p class="tagline">O verdadeiro sabor da comida nordestina caseira</p>
             <div class="header-buttons">
                 <a href="#cardapio" class="btn">Ver Cardápio</a>
-                <a href="#reservas" class="btn btn-outline">Fazer Reserva</a>
+                <a href="reserva.html" class="btn btn-outline">Fazer Reserva</a>
             </div>
         </div>
     </header>
@@ -34,12 +34,6 @@
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <!-- <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> -->
-            <!-- ====================================== -->
             <div class="mobile-menu-icon">
                 <button onclick="menuShow()"><img class="icon" src="assets/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="icon menu"></button>
             </div>
@@ -54,7 +48,7 @@
                         <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
                     </ul>
                 <div class="login-button">
-                    <button><a href="#reservas">Reservar</a></button>
+                    <button><a href="reserva.html">Reservar</a></button>
                 </div>
             </div>
         
@@ -430,7 +424,7 @@
                     alt="Prato nordestino">
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1350&q=80"
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0-1U9aainfcSxS-sLKPUaz7pYSYxIFCFbfw&s"
                     alt="Comida caseira">
             </div>
             <div class="gallery-item">
@@ -438,7 +432,7 @@
                     alt="Moqueca tradicional">
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1350&q=80"
+                <img src="https://cdn.prod.website-files.com/6423e8cf97045d0ac6e9ffb9/64e486ac638f8577a303bf41_servicio%20de%20mesa%20en%20restaurantes.webp"
                     alt="Mesa do restaurante">
             </div>
             <div class="gallery-item">
@@ -450,7 +444,7 @@
                     alt="Ingredientes frescos">
             </div>
             <div class="gallery-item">
-                <img src="https://img.freepik.com/fotos-gratis/17-estilo-de-vida-de-pessoas-pedindo-sushi-em-casa_52683-100629.jpg?semt=ais_hybrid&w=740&q=80"
+                <img src="https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=450,height=450,dpr=2/tour_img/63e248b0650ba.jpeg"
                     alt="Culinária autêntica">
             </div>
             <div class="gallery-item">
@@ -459,8 +453,12 @@
             </div>
         </div>
     </section>
-
-    <section id="contato"class="contact">
+    
+        <div class="botao-reserva">
+            <a href="reserva.html" class="btn-reserva">Faça sua reserva</a>
+        </div>
+    
+    <section id="contato" class="contact">
         <h2 class="section-title">Entre em Contato</h2>
         <div class="contact-container">
             <div class="contact-info">
@@ -494,49 +492,6 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="contact-form">
-                <h3 id="reservas">Faça sua Reserva</h3>
-                <form id="reservation-form">
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Data</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="time">Horário</label>
-                        <input type="time" id="time" name="time" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="guests">Número de Pessoas</label>
-                        <select id="guests" name="guests" required>
-                            <option value="">Selecione</option>
-                            <option value="1">1 pessoa</option>
-                            <option value="2">2 pessoas</option>
-                            <option value="3">3 pessoas</option>
-                            <option value="4">4 pessoas</option>
-                            <option value="5">5 pessoas</option>
-                            <option value="6">6 pessoas</option>
-                            <option value="7">7 ou mais pessoas</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem (opcional)</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar Reserva</button>
-                </form>
             </div>
         </div>
     </section>
@@ -590,7 +545,7 @@
 
             <div class="testimonial-card">
                 <div class="testimonial-header">
-                    <img src="data:image/jpeg;base64,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" alt="Beatriz Martins" class="testimonial-avatar">
+                    <img src="https://img.freepik.com/fotos-gratis/close-up-de-jovem-profissional-feminina-fazendo-contato-visual-contra-fundo-colorido_662251-651.jpg?semt=ais_hybrid&w=740&q=80" alt="Beatriz Martins" class="testimonial-avatar">
                     <div class="testimonial-info">
                         <h4>Beatriz Martins</h4>
                         <p class="rating">★★★★★</p>
@@ -618,8 +573,9 @@
                 </div>
             </div>
             <hr>
-            <div class="footer-logo">Cozinha de Histórias</div>
-            <p>O verdadeiro sabor da comida nordestina caseira</p>
+            <section class="container-footer-link">
+                <div class="footer-logo">Cozinha de Histórias</div>
+                <p>O verdadeiro sabor da comida nordestina caseira</p>
             <div class="footer-links">
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre</a>
@@ -643,6 +599,7 @@
                         </a>
                     </div>
                 </div>
+            </section>
             <hr>
             <div class="copyright">
                 &copy; 2025 Cozinha de Histórias. Todos os direitos reservados.

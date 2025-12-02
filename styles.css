@@ -474,9 +474,67 @@ mobile-menu {
 }
 
 .contact {
-    padding: 4rem 20px 4rem 20px;
+    padding: 0 20px 4rem 20px;
 }
 
+/* Centraliza o formulário de reserva e define largura máxima */
+.container-formulario {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.container-formulario .contact-form {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 640px) {
+    .container-formulario {
+        padding: 1.5rem 12px;
+    }
+    .container-formulario .contact-form {
+        padding: 0 6px;
+    }
+}
+.botao-reserva{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0 0 0;
+}
+.botao-reserva a{
+    text-align: center;
+    background-color: var(--secondary);
+    padding:1rem 5rem;
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.2s ease;
+    display: inline-block;
+}
+
+.botao-reserva a:hover,
+.btn-reserva:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.botao-reserva a:active,
+.btn-reserva:active {
+    transform: translateY(-2px) scale(0.995);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.botao-reserva a:focus,
+.btn-reserva:focus {
+    outline: 3px solid rgba(139,69,19,0.18);
+    outline-offset: 4px;
+}
 .contact > * {
     max-width: 1200px;
     margin-left: auto;
@@ -493,7 +551,21 @@ mobile-menu {
     margin-bottom: 1.5rem;
     color: var(--primary);
 }
-
+.contact-form{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    align-content: center;
+    width: 100rem;
+    background-color: var(--white);
+    padding: 2rem 4rem 3rem 4rem;
+    margin: 0 4rem 2rem 4rem;
+    border-radius: 1rem;
+}
+.container-form{
+    display: flex;
+    justify-content: center;
+}
 .contact-item {
     margin-bottom: 1.5rem;
 }
@@ -602,6 +674,21 @@ mobile-menu {
     border-color: var(--primary);
 }
 
+/* Carrinho: estilos para finalização e confirmation */
+.cart-summary #payment-details {
+    margin-top: 1rem;
+}
+
+#finalize-btn {
+    margin-top: 1rem;
+    width: 100%;
+    display: block;
+}
+
+#confirmation {
+    margin-top: 1rem;
+}
+
 footer {
     background: var(--dark);
     color: var(--white);
@@ -619,28 +706,19 @@ footer {
     align-items: center;
     justify-content: center;
 }
-/* .container-footer-contact-item span{
-    color: var(--white);
-    transition: color 0.3s ease;
+
+.container-footer-link{
+    margin: 2rem auto;
 }
-
-
-.footer-links a {
-    color: var(--white);
-    text-decoration: none;
-    margin: 0 1rem;
+hr{
+    border: 0.1rem solid var(--light);
 }
-
-.footer-links a:hover {
-    color: var(--accent);
-} */
-/* --- NOVAS CLASSES PARA O FOOTER TIPO STEAM --- */
 
 .footer-top-section {
     display: flex;
     justify-content: space-between; /* Espaça as logos e o texto central */
     align-items: center; /* Alinha verticalmente */
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     padding-bottom: 3rem;
     /* Use uma borda sutil no topo para separar, se quiser */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
@@ -1038,3 +1116,76 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* === Additional responsive breakpoints (S/M/L mobile, tablet, laptops, 4K) === */
+
+/* Ensure full nav on large screens, mobile menu on smaller */
+@media (min-width: 1025px) {
+    .nav-links { display: flex !important; }
+    .mobile-menu-icon { display: none !important; }
+    .mobile-menu { display: none !important; }
+}
+
+/* Tablet and large mobile: use mobile menu */
+@media (max-width: 1024px) {
+    .nav-links { display: none !important; }
+    .mobile-menu-icon { display: block !important; }
+    /* mobile menu hidden until opened by JS (adds .open) */
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: flex; flex-direction: column; }
+    .logo-nav img { width: 44px; }
+}
+
+/* Large mobile (L) <= 640px */
+@media (max-width: 640px) {
+    .logo-nav img { width: 42px; }
+    .nav-links a { font-size: 1rem; }
+    .mobile-menu a { font-size: 1rem; }
+    .mobile-menu .nav-item { padding-top: 1rem; }
+}
+
+/* Medium mobile (M) <= 480px */
+@media (max-width: 480px) {
+    .logo-nav img { width: 38px; }
+    .logo-nav span { font-size: 1rem; }
+    .header-buttons .btn { padding: 10px 18px; font-size: 0.95rem; }
+    .mobile-menu a { font-size: 0.95rem; padding: 0.6rem 0; }
+}
+
+/* Small mobile (S) <= 360px */
+@media (max-width: 360px) {
+    .logo-nav img { width: 34px; }
+    .logo-nav span { font-size: 0.95rem; }
+    .header-buttons .btn { padding: 8px 14px; font-size: 0.9rem; }
+    .mobile-menu a { font-size: 0.9rem; }
+}
+
+/* Laptop (up to 1440) - ensure comfortable spacing */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .nav-links li { margin-left: 2.4rem; }
+}
+
+/* Laptop large (up to 1920) */
+@media (min-width: 1441px) and (max-width: 1919px) {
+    .nav-links li { margin-left: 2.8rem; }
+    .nav-links a { font-size: 1.15rem; }
+}
+
+/* 4K and ultra-wide screens */
+@media (min-width: 1920px) {
+    .nav-container { max-width: 1800px; }
+    .nav-links li { margin-left: 3rem; }
+    .nav-links a { font-size: 1.18rem; }
+}
+
+@media (min-width: 2560px) {
+    .nav-container { max-width: 2200px; }
+    .nav-links a { font-size: 1.25rem; }
+}
+
+/* Small refinements for mobile menu button */
+.mobile-menu-icon { background: transparent; border: none; }
+.mobile-menu-icon img.icon { width: 26px; height: auto; }
+
+/* Ensure the mobile menu covers full width when open */
+.mobile-menu.open { width: 100%; left: 0; right: 0; padding: 1rem 0; background: var(--primary); z-index: 999; }

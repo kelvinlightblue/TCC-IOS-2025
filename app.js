@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // floating cart button
     const cartButton = document.createElement('a');
     cartButton.className = 'cart-button';
-    cartButton.href = 'cart.html';
+    cartButton.href = 'carrinho.html';
     cartButton.innerHTML = `Carrinho (<span class="cart-count">0</span>)`;
     document.body.appendChild(cartButton);
     updateCartCount();
