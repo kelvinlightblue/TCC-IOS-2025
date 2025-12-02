@@ -472,8 +472,24 @@ mobile-menu {
     transform: scale(1.1);
 }
 
+.container-btn-reserva .btn{
+    display: inline-block;
+        background: var(--secondary);
+        color: var(--white);
+        padding: 1rem 5rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        margin: 5rem auto 0 auto;
+        cursor: pointer;
+        transition: all 0.3s 
+    ease;
+        text-decoration: none;
+
+}
+
 .contact {
-    padding: 4rem 20px 4rem 20px;
+    padding: 0 20px 4rem 20px;
 }
 
 .contact > * {
@@ -493,6 +509,20 @@ mobile-menu {
     color: var(--primary);
 }
 
+.contact-form{
+    background-color: var(--white);
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+}
+.contact-form input{
+    background-color: var(--light);
+}
+.contact-form textarea{
+    background-color: var(--light);
+}
+#guests{
+    background-color: var(--light);
+}  
 .contact-item {
     margin-bottom: 1.5rem;
 }
@@ -505,6 +535,15 @@ mobile-menu {
 .social-links {
     display: flex;
     gap: 1rem;
+}
+
+.social-links img{
+    width: 3rem;
+}
+.social-links article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .social-link {
@@ -544,25 +583,29 @@ mobile-menu {
 footer {
     background: var(--dark);
     color: var(--white);
-    padding: 3rem 20px;
+    padding: 3rem 0; /* vertical spacing only, lateral padding handled by .footer-content */
     text-align: center;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px; /* align lateral edges with nav-container */
 }
 
 /* --- NOVAS CLASSES PARA O FOOTER TIPO STEAM --- */
-
+hr{
+    /* height: 2rem; */
+    background-color: #ffc107;
+    border: 1px solid var(--light);
+}
 .footer-top-section {
     display: flex;
     justify-content: space-between; /* Espaça as logos e o texto central */
     align-items: center; /* Alinha verticalmente */
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     padding-bottom: 3rem;
     /* Use uma borda sutil no topo para separar, se quiser */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .footer-logo-container {
@@ -581,7 +624,21 @@ footer {
     opacity: 1;
     
 }
+.footer-link-container{
+    margin: 2rem auto;
+}
+.footer-contact-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-contact-item a{
+    color: var(--light);
+}
 
+.footer-contact-item .social-links{
+    gap: 3rem;
+}
 .footer-text-center {
     flex: 1; /* Permite que o texto ocupe o espaço restante */
     font-size: 0.9rem;
@@ -616,7 +673,16 @@ footer {
 .copyright {
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Generic page wrapper to align content with nav-container */
+.page {
+    padding: 2rem 20px;
+}
+.page > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Responsividade */
@@ -717,7 +783,7 @@ footer {
     transform: translateX(-50%) translateY(0);
 }
 
-/* Animação para confirmação no cart.html */
+/* Animação para confirmação no carrinho.html */
 #confirmation.success {
     animation: conf-scale 0.6s ease both;
 }
@@ -757,7 +823,7 @@ footer {
 /* Cart page styles */
 .cart-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 4rem auto;
     width: 100%;
     background: var(--white);
     padding: 1.5rem 20px;
@@ -821,10 +887,6 @@ footer {
 }
 
 @media screen and (max-width: 730px) {
-    /* .nav-bar {
-        padding: 1.5rem 4rem;
-    } */
-
     h1 {
         font-size: 1.5rem;
     }

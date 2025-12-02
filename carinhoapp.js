@@ -143,6 +143,9 @@ function finalizePurchase() {
     saveCart([]);
     // atualiza view
     setTimeout(() => { renderCart(); }, 800);
+
+    // Após exibir confirmação, voltar para a página inicial
+    setTimeout(() => { window.location.href = 'index.html'; }, 3000);
 }
 
 // Inicialização

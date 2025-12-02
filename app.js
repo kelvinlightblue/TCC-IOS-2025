@@ -72,15 +72,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Validação básica
             if (!name || !email || !phone || !date || !time || !guests) {
-                alert('Por favor, preencha todos os campos obrigatórios.');
+                // use toast for inline feedback
+                showToast('Por favor, preencha todos os campos obrigatórios.');
                 return;
             }
 
-            // Simulação de envio (em um caso real, enviaria para um servidor)
-            alert(`Obrigado, ${name}! Sua reserva para ${guests} pessoas no dia ${date} às ${time} foi recebida. Entraremos em contato para confirmação.`);
+            // Mostrar confirmação animada semelhante ao carrinho
+            const reservationId = 'RES-' + Date.now();
+            const conf = document.createElement('div');
+            conf.className = 'order-confirmation';
+            conf.setAttribute('role', 'status');
+            conf.setAttribute('aria-live', 'polite');
+            conf.innerHTML = `
+                <svg class="check" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <div class="order-text"><strong>Reserva enviada!</strong><br>Reserva <strong>${reservationId}</strong>. Obrigado, ${name}.</div>
+            `;
+            // append to #confirmation container or body as fallback
+            const confirmationContainer = document.getElementById('confirmation');
+            if (confirmationContainer) {
+                confirmationContainer.appendChild(conf);
+            } else {
+                document.body.appendChild(conf);
+            }
 
-            // Limpa o formulário
+            // limpa o formulário
             this.reset();
+
+            // após breve exibição, remover e redirecionar para a página inicial
+            setTimeout(() => {
+                conf.remove();
+                window.location.href = 'index.html';
+            }, 2800);
         });
     }
 
@@ -348,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // floating cart button
     const cartButton = document.createElement('a');
     cartButton.className = 'cart-button';
-    cartButton.href = 'cart.html';
+    cartButton.href = 'carrinho.html';
     cartButton.innerHTML = `Carrinho (<span class="cart-count">0</span>)`;
     document.body.appendChild(cartButton);
     updateCartCount();

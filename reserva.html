@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+        <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo-nav"> 
+                <img src="assets/logo/logoCozinhaWhite.png" alt="Logo Cozinha de Histórias">
+                <span>Cozinha de Histórias</span> 
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#cardapio">Cardápio</a></li>
+                <li><a href="index.html#galeria">Galeria</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="assets/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="icon menu"></button>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html#inicio" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="index.html#cardapio" class="nav-link">Cardápio</a></li>
+                <li class="nav-item"><a href="index.html#galeria" class="nav-link">Galeria</a></li>
+                <li class="nav-item"><a href="index.html#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="carrinho.html">Carrinho</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="container-carrinho-compras">
+            <h1 >Faça sua reserva</h1>
+        </section>
+        <div class="contact-form">
+                <form id="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Data</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Horário</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Número de Pessoas</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Selecione</option>
+                            <option value="1">1 pessoa</option>
+                            <option value="2">2 pessoas</option>
+                            <option value="3">3 pessoas</option>
+                            <option value="4">4 pessoas</option>
+                            <option value="5">5 pessoas</option>
+                            <option value="6">6 pessoas</option>
+                            <option value="7">7 ou mais pessoas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem (opcional)</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Reserva</button>
+                </form>
+                <div id="confirmation"></div>
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-top-section">
+                <div class="footer-logo-container">
+                    <img src="assets/logo/logoFieldColor.png" alt="Logo field"> 
+                </div>
+
+                <div class="footer-text-center">
+                    Cozinha de Histórias é um projeto que celebra a rica culinária nordestina, trazendo o sabor e a tradição de volta à mesa.
+                </div>
+
+                <div class="footer-logo-container">
+                    <img src="assets/logo/logoCozinhaBIgColor.png" alt="Logo cozinha de Histórias">
+                </div>
+            </div>
+            <hr>
+            <section class="footer-link-container">
+                <div class="footer-logo">Cozinha de Histórias</div>
+                <p>O verdadeiro sabor da comida nordestina caseira</p>
+                <div class="footer-links">
+                    <a href="#inicio">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#cardapio">Cardápio</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-contact-item">
+                    <div class="social-links">
+                        <article>
+                            <a href=""><img src="assets/icon/iconInsta.png" alt=""></a>
+                            <a href="#" class="social-link">Instagram</a>
+                        </article>
+                        <article>
+                            <a href=""><img src="assets/icon/iconFace.png" alt=""></a>
+                            <a href="#" class="social-link">Facebook</a>
+                        </article>
+                        <article>
+                            <a href=""><img src="assets/icon/iconWhats.png" alt=""></a>
+                            <a href="#" class="social-link">WhatsApp</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <div class="copyright">
+                &copy; 2025 Cozinha de Histórias. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+    </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
