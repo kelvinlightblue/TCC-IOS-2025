@@ -28,7 +28,7 @@ body {
 }
 
 header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://granmareiro.com.br/blog/wp-content/uploads/2025/04/Culinaria-nordestina.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://granmareiro.com.br/blog/wp-content/uploads/2025/04/Culinaria-nordestina.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -1320,7 +1320,9 @@ body.dark-mode * {
 }
 
 body.dark-mode header {
-    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('https://granmareiro.com.br/blog/wp-content/uploads/2025/04/Culinaria-nordestina.jpg');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://granmareiro.com.br/blog/wp-content/uploads/2025/04/Culinaria-nordestina.jpg');
+    background-size: cover;
+    background-position: center;
     color: #e0e0e0;
 }
 

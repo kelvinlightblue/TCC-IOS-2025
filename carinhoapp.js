@@ -145,7 +145,7 @@ function finalizePurchase() {
     setTimeout(() => { renderCart(); }, 800);
 
     // Após exibir confirmação, voltar para a página inicial
-    setTimeout(() => { window.location.href = 'index.html'; }, 3000);
+    // setTimeout(() => { window.location.href = 'index.html'; }, 3000);
 }
 
 // Inicialização
