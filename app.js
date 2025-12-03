@@ -340,3 +340,49 @@ function menuShow() {
         document.querySelector('.icon').src = "assets/icon/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg";
     }
 }
+
+// Acessibilidade
+function toggleAccessibility() {
+    const dropdown = document.getElementById('accessibilityDropdown');
+    dropdown.classList.toggle('open');
+}
+
+// Fechar dropdown ao clicar fora
+document.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('accessibilityDropdown');
+    const accessibilityBtn = document.querySelector('.accessibility-btn');
+    if (!dropdown.contains(e.target) && !accessibilityBtn.contains(e.target)) {
+        dropdown.classList.remove('open');
+    }
+});
+
+function changeLanguage(lang) {
+    localStorage.setItem('language', lang);
+    // Aqui você pode adicionar mais lógica de tradução conforme necessário
+    console.log('Idioma alterado para: ' + lang);
+    alert('Idioma alterado para: ' + (lang === 'pt' ? 'Português' : lang === 'en' ? 'English' : 'Español'));
+}
+
+function toggleDarkMode() {
+    const body = document.body;
+    const themeBtn = document.getElementById('themeBtn');
+    
+    body.classList.toggle('dark-mode');
+    
+    // Salvar preferência no localStorage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'true');
+        themeBtn.textContent = '☀️ Modo Claro';
+    } else {
+        localStorage.setItem('darkMode', 'false');
+        themeBtn.textContent = '🌙 Modo Escuro';
+    }
+}
+
+// Aplicar modo escuro ao carregar a página se estiver salvo
+window.addEventListener('load', function () {
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('themeBtn').textContent = '☀️ Modo Claro';
+    }
+});

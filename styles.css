@@ -1215,6 +1215,300 @@ hr{
 /* Ensure the mobile menu covers full width when open */
 .mobile-menu.open { width: 100%; left: 0; right: 0; padding: 1rem 0; background: var(--primary); z-index: 999; }
 
+/* Accessibility Floating Button */
+.accessibility-floating {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+.accessibility-menu {
+    position: relative;
+}
+
+.accessibility-btn {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.accessibility-btn:hover {
+    background: var(--primary);
+    transform: scale(1.15);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.accessibility-dropdown {
+    display: none;
+    position: absolute;
+    top: -220px;
+    right: 80px;
+    background: var(--white);
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    padding: 12px;
+    min-width: 240px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.accessibility-dropdown.open {
+    display: block;
+}
+
+.accessibility-group {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 10px;
+}
+
+.accessibility-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.accessibility-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+}
+
+.lang-btn,
+.theme-btn {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    background: var(--light);
+    color: var(--text);
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover,
+.theme-btn:hover {
+    background: var(--secondary);
+    color: var(--white);
+    font-weight: bold;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode * {
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('https://granmareiro.com.br/blog/wp-content/uploads/2025/04/Culinaria-nordestina.jpg');
+    color: #e0e0e0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .tagline,
+body.dark-mode .header-buttons {
+    color: #e0e0e0;
+}
+
+body.dark-mode nav {
+    background: #2a2a2a;
+    border-bottom: 2px solid var(--secondary);
+}
+
+body.dark-mode nav a,
+body.dark-mode nav .nav-link,
+body.dark-mode .logo-nav span {
+    color: #e0e0e0;
+}
+
+body.dark-mode .mobile-menu {
+    background: #2a2a2a;
+}
+
+body.dark-mode .mobile-menu a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .section-title {
+    color: var(--accent);
+}
+
+body.dark-mode .about-text,
+body.dark-mode .about-text p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .menu-item,
+body.dark-mode .contact-form,
+body.dark-mode .reservation-form {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    border-color: var(--secondary);
+}
+
+body.dark-mode .menu-item h3,
+body.dark-mode .menu-item p,
+body.dark-mode .price {
+    color: #e0e0e0;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background: #333;
+    color: #e0e0e0;
+    border-color: var(--secondary);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #999;
+}
+
+body.dark-mode hr {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+body.dark-mode footer {
+    background: #1a1a1a;
+    color: #e0e0e0;
+    border-top: 2px solid var(--secondary);
+}
+
+body.dark-mode footer a {
+    color: var(--accent);
+}
+
+body.dark-mode footer a:hover {
+    color: var(--white);
+}
+
+body.dark-mode .social-links {
+    color: #e0e0e0;
+}
+
+body.dark-mode .social-link {
+    color: #e0e0e0;
+}
+
+body.dark-mode .category-btn {
+    background: #333;
+    color: #e0e0e0;
+    border-color: var(--secondary);
+}
+
+body.dark-mode .category-btn.active {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+body.dark-mode .accessibility-dropdown {
+    background: #2a2a2a;
+    border-color: var(--secondary);
+    color: #e0e0e0;
+}
+
+body.dark-mode .accessibility-dropdown label {
+    color: var(--accent);
+}
+
+body.dark-mode .lang-btn,
+body.dark-mode .theme-btn {
+    background: #333;
+    color: #e0e0e0;
+    border-color: var(--secondary);
+}
+
+body.dark-mode .lang-btn:hover,
+body.dark-mode .theme-btn:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+body.dark-mode .testimonial-card {
+    background: linear-gradient(180deg, #222425, #2b2b2b);
+    color: #eaeaea;
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .testimonial-card p {
+    color: #dcdcdc;
+}
+
+body.dark-mode .testimonial-header {
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+body.dark-mode .testimonial-avatar {
+    border: 2px solid rgba(255,255,255,0.06);
+}
+
+body.dark-mode .testimonial-info h4 {
+    color: #ffdca3; /* tom mais quente para destaque */
+}
+
+body.dark-mode .rating {
+    color: #f1c40f;
+}
+
+/* Carousel cards in dark mode */
+body.dark-mode .carousel-item {
+    background: linear-gradient(180deg, #222425, #2a2a2a);
+    color: #eaeaea;
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .carousel-content h3 {
+    color: #ffdca3;
+}
+
+body.dark-mode .carousel-content p,
+body.dark-mode .carousel-content .price {
+    color: #dcdcdc;
+}
+
+body.dark-mode .carousel-image img {
+    filter: saturate(0.95) contrast(0.95) brightness(0.95);
+}
+
+body.dark-mode .carousel-btn {
+    background: rgba(0,0,0,0.5);
+}
+
+body.dark-mode .carousel-dots button { background: #555; }
+body.dark-mode .carousel-dots button.active { background: var(--secondary); }
+
 
 /* Medium mobile: phones up to 480px (M) */
 @media (max-width: 480px) {
