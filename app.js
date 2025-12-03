@@ -1,29 +1,22 @@
-// Menu mobile
 document.addEventListener('DOMContentLoaded', function () {
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (mobileMenu) {
-        mobileMenu.addEventListener('click', function () {
-            navLinks.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-    }
+    // Aplica o modo escuro ao carregar a página
+    applyDarkModeOnLoad();
 
     // Fecha o menu mobile quando o usuário clica fora dele
     document.addEventListener('click', function (e) {
         const mobileIcon = document.querySelector('.mobile-menu-icon');
         const mobileMenuEl = document.querySelector('.mobile-menu');
-        if (!mobileMenuEl || !mobileIcon) return;
+        const navLinks = document.querySelector('.nav-links'); // Adicionado para consistência
 
-        const isOpen = mobileMenuEl.classList.contains('open') || mobileMenuEl.classList.contains('active');
+        if (!mobileMenuEl || !mobileIcon || !navLinks) return;
+
+        const isOpen = mobileMenuEl.classList.contains('open');
         if (!isOpen) return;
 
         // se o clique não ocorreu dentro do menu nem no ícone, fecha
         if (!mobileMenuEl.contains(e.target) && !mobileIcon.contains(e.target)) {
             mobileMenuEl.classList.remove('open');
-            mobileMenuEl.classList.remove('active');
-            navLinks.classList.remove('active');
+            // A classe 'active' não parece ser usada consistentemente para o menu, removendo para simplificar
             const iconImg = document.querySelector('.mobile-menu-icon .icon') || document.querySelector('.icon');
             if (iconImg) iconImg.src = 'assets/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg';
         }
@@ -73,9 +66,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
 
                 // Fecha o menu mobile se estiver aberto
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    mobileMenu.classList.remove('active');
+                const mobileMenuEl = document.querySelector('.mobile-menu');
+                if (mobileMenuEl && mobileMenuEl.classList.contains('open')) {
+                    mobileMenuEl.classList.remove('open');
+                    const iconImg = document.querySelector('.mobile-menu-icon .icon');
+                    if (iconImg) iconImg.src = 'assets/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg';
                 }
             }
         });
@@ -84,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Adiciona classe de destaque ao item do menu ativo durante a rolagem
     window.addEventListener('scroll', function () {
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-links a');
+        const navLinksDesktop = document.querySelectorAll('.nav-links a');
 
         let current = '';
 
@@ -97,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        navLinks.forEach(link => {
+        navLinksDesktop.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
@@ -329,7 +324,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // evento para adicionar ao carrinho: agora tratado pelo painel de ação
 });
 
-
 function menuShow() {
     let menuMobile = document.querySelector('.mobile-menu');
     if (menuMobile.classList.contains('open')) {
@@ -351,7 +345,7 @@ function toggleAccessibility() {
 document.addEventListener('click', function (e) {
     const dropdown = document.getElementById('accessibilityDropdown');
     const accessibilityBtn = document.querySelector('.accessibility-btn');
-    if (!dropdown.contains(e.target) && !accessibilityBtn.contains(e.target)) {
+    if (dropdown && accessibilityBtn && !dropdown.contains(e.target) && !accessibilityBtn.contains(e.target)) {
         dropdown.classList.remove('open');
     }
 });
@@ -367,22 +361,25 @@ function toggleDarkMode() {
     const body = document.body;
     const themeBtn = document.getElementById('themeBtn');
     
-    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.toggle('dark-mode');
     
     // Salvar preferência no localStorage
-    if (body.classList.contains('dark-mode')) {
+    if (isDarkMode) {
         localStorage.setItem('darkMode', 'true');
-        themeBtn.textContent = '☀️ Modo Claro';
+        if (themeBtn) themeBtn.textContent = '☀️ Modo Claro';
     } else {
         localStorage.setItem('darkMode', 'false');
-        themeBtn.textContent = '🌙 Modo Escuro';
+        if (themeBtn) themeBtn.textContent = '🌙 Modo Escuro';
     }
 }
 
 // Aplicar modo escuro ao carregar a página se estiver salvo
-window.addEventListener('load', function () {
+function applyDarkModeOnLoad() {
     if (localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('dark-mode');
-        document.getElementById('themeBtn').textContent = '☀️ Modo Claro';
+        const themeBtn = document.getElementById('themeBtn');
+        if (themeBtn) {
+            themeBtn.textContent = '☀️ Modo Claro';
+        }
     }
-});
+}

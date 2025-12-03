@@ -1481,6 +1481,44 @@ body.dark-mode .rating {
     color: #f1c40f;
 }
 
+/* Seção de depoimentos no modo escuro */
+body.dark-mode .testimonials {
+    background-color: #1a1a1a; /* Cor de fundo escura para a seção */
+}
+
+/* --- Dark Mode para Páginas Adicionais (Carrinho, Reserva) --- */
+
+body.dark-mode .container-carrinho-compras h1 {
+    color: var(--accent);
+}
+
+/* Container do carrinho no modo escuro */
+body.dark-mode .cart-container {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .cart-summary {
+    background: #2a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .cart-summary p,
+body.dark-mode .cart-summary h3,
+body.dark-mode .cart-summary h4,
+body.dark-mode .cart-item-details strong {
+    color: #e0e0e0;
+}
+
+body.dark-mode .cart-item {
+    border-bottom-color: #333;
+}
+
+body.dark-mode .cart-item-details strong {
+    color: #e0e0e0;
+}
+
+
 /* Carousel cards in dark mode */
 body.dark-mode .carousel-item {
     background: linear-gradient(180deg, #222425, #2a2a2a);
@@ -1526,4 +1564,3 @@ body.dark-mode .carousel-dots button.active { background: var(--secondary); }
     .logo-nav img { width: 32px; }
     .nav-links a { font-size: 0.9rem; }
 }
-
