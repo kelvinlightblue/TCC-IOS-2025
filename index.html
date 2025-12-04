@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozinha de Histórias | Restaurante Nordestino</title>
+    <title data-translate-key="pageTitleIndex">Cozinha de Histórias | Restaurante Nordestino</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Adicione estas regras para alinhar os cards do cardápio */
@@ -29,15 +29,15 @@
     </style>
 </head>
 
-<body>
+<body data-page-key="pageTitleIndex">
     <header id="inicio">
         <div class="header-content">
             <div class="logo"> <img src="assets/logo/logoCozinhaBIgColorU20.png" alt="Logo Cozinha de Histórias"></div>
-            <h1>Restaurante Nordestino</h1>
-            <p class="tagline">O verdadeiro sabor da comida nordestina caseira</p>
+            <h1 data-translate-key="mainHeading">Restaurante Nordestino</h1>
+            <p class="tagline" data-translate-key="tagline">O verdadeiro sabor da comida nordestina caseira</p>
             <div class="header-buttons">
-                <a href="#cardapio" class="btn">Ver Cardápio</a>
-                <a href="reserva.html" class="btn btn-outline">Fazer Reserva</a>
+                <a href="#cardapio" class="btn" data-translate-key="viewMenuBtn">Ver Cardápio</a>
+                <a href="reserva.html" class="btn btn-outline" data-translate-key="makeReservationBtn">Fazer Reserva</a>
             </div>
         </div>
     </header>
@@ -46,14 +46,14 @@
         <div class="nav-container">
             <a href="#inicio" class="logo-nav">
                 <img src="assets/logo/logoCozinhaColorU20.png" alt="Logo Cozinha de Histórias">
-                <span>Cozinha de Histórias</span>
+                <span data-translate-key="navBrand">Cozinha de Histórias</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#inicio" data-translate-key="navHome">Início</a></li>
+                <li><a href="#sobre" data-translate-key="navAbout">Sobre</a></li>
+                <li><a href="#cardapio" data-translate-key="navMenu">Cardápio</a></li>
+                <li><a href="#galeria" data-translate-key="navGallery">Galeria</a></li>
+                <li><a href="#contato" data-translate-key="navContact">Contato</a></li>
             </ul>
             <div class="mobile-menu-icon">
                 <button onclick="menuShow()"><img class="icon"
@@ -63,32 +63,31 @@
         </div>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="#cardapio" class="nav-link">Cardápio</a></li>
-                <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
-                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="#inicio" class="nav-link" data-translate-key="navHome">Início</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link" data-translate-key="navAbout">Sobre</a></li>
+                <li class="nav-item"><a href="#cardapio" class="nav-link" data-translate-key="navMenu">Cardápio</a></li>
+                <li class="nav-item"><a href="#galeria" class="nav-link" data-translate-key="navGallery">Galeria</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link" data-translate-key="navContact">Contato</a></li>
             </ul>
             <div class="login-button">
-                <button><a href="carrinho.html">Carrinho</a></button>
+                <button><a href="carrinho.html" data-translate-key="navCart">Carrinho</a></button>
             </div>
             <div class="login-button">
-                <button><a href="reserva.html">Reservar</a></button>
+                <button><a href="reserva.html" data-translate-key="navReserve">Reservar</a></button>
             </div>
         </div>
 
     </nav>
 
 
-
     <section id="sobre" class="about">
-        <h2 class="section-title">Nossa História</h2>
+        <h2 class="section-title" data-translate-key="aboutTitle">Nossa História</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Há mais de 20 anos, Dona Maria trouxe do interior da Bahia os sabores autênticos da culinária
+                <p data-translate-key="aboutText1">Há mais de 20 anos, Dona Maria trouxe do interior da Bahia os sabores autênticos da culinária
                     nordestina para a cidade. O "Cozinha de Histórias" nasceu do desejo de compartilhar com todos o
                     gostinho da comida caseira, feita com amor e ingredientes selecionados.</p>
-                <p>Nossos pratos são preparados seguindo receitas tradicionais, passadas de geração em geração,
+                <p data-translate-key="aboutText2">Nossos pratos são preparados seguindo receitas tradicionais, passadas de geração em geração,
                     garantindo a autenticidade e o sabor inconfundível que remetem às cozinhas das mães nordestinas.</p>
             </div>
             <div class="about-image">
@@ -98,13 +97,13 @@
     </section>
 
     <section id="cardapio" class="menu">
-        <h2 class="section-title">Cardápio</h2>
+        <h2 class="section-title" data-translate-key="menuTitle">Cardápio</h2>
         <div class="menu-categories">
-            <button class="category-btn active" data-category="todos">Todos</button>
-            <button class="category-btn" data-category="pratos">Pratos Principais</button>
-            <button class="category-btn" data-category="entradas">Entradas</button>
-            <button class="category-btn" data-category="sobremesas">Sobremesas</button>
-            <button class="category-btn" data-category="bebidas">Bebidas</button>
+            <button class="category-btn active" data-category="todos" data-translate-key="menuCatAll">Todos</button>
+            <button class="category-btn" data-category="pratos" data-translate-key="menuCatMain">Pratos Principais</button>
+            <button class="category-btn" data-category="entradas" data-translate-key="menuCatAppetizers">Entradas</button>
+            <button class="category-btn" data-category="sobremesas" data-translate-key="menuCatDesserts">Sobremesas</button>
+            <button class="category-btn" data-category="bebidas" data-translate-key="menuCatDrinks">Bebidas</button>
         </div>
         <div class="menu-grid">
 
@@ -113,10 +112,10 @@
                     <img src="assets/img/pudim.png" alt="Pudim">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Pudim de Leite Condensado</h3>
-                    <p>Pudim cremoso com calda de caramelo, receita tradicional.</p>
+                    <h3 data-translate-key="pudimTitle">Pudim de Leite Condensado</h3>
+                    <p data-translate-key="pudimDesc">Pudim cremoso com calda de caramelo, receita tradicional.</p>
                     <div class="price">R$ 14,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -125,10 +124,10 @@
                     <img src="assets/img/moqueca.png" alt="Moqueca">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Moqueca de Peixe</h3>
-                    <p>Peixe cozido no leite de coco com azeite de dendê, pimentões e coentro.</p>
+                    <h3 data-translate-key="moquecaTitle">Moqueca de Peixe</h3>
+                    <p data-translate-key="moquecaDesc">Peixe cozido no leite de coco com azeite de dendê, pimentões e coentro.</p>
                     <div class="price">R$ 56,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -138,10 +137,10 @@
                     <img src="assets/img/acaraje.png" alt="Acarajé">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Acarajé</h3>
-                    <p>Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá e camarão.</p>
+                    <h3 data-translate-key="acarajeTitle">Acarajé</h3>
+                    <p data-translate-key="acarajeDesc">Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá e camarão.</p>
                     <div class="price">R$ 12,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
             <div class="menu-item" data-category="pratos">
@@ -149,10 +148,10 @@
                     <img src="assets/img/camaraoMoranga.png" alt="Camarão na Moranga">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Camarão na Moranga</h3>
-                    <p>Camarões cremosos servidos dentro da moranga assada, prato para compartilhar.</p>
+                    <h3 data-translate-key="camaraoMorangaTitle">Camarão na Moranga</h3>
+                    <p data-translate-key="camaraoMorangaDesc">Camarões cremosos servidos dentro da moranga assada, prato para compartilhar.</p>
                     <div class="price">R$ 68,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
             <!-- Novos cards adicionados: 3 pratos principais -->
@@ -161,10 +160,10 @@
                     <img src="assets/img/carnePanela.png" alt="Carne de Panela">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Carne de Panela</h3>
-                    <p>Carne macia cozida lentamente com legumes e temperos caseiros.</p>
+                    <h3 data-translate-key="carnePanelaTitle">Carne de Panela</h3>
+                    <p data-translate-key="carnePanelaDesc">Carne macia cozida lentamente com legumes e temperos caseiros.</p>
                     <div class="price">R$ 44,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -173,10 +172,10 @@
                     <img src="assets/img/baiaoCompleto.png" alt="Baião Completo">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Baião Completo</h3>
-                    <p>Baião com carne de sol, queijo coalho e acompanhamentos da casa.</p>
+                    <h3 data-translate-key="baiaoCompletoTitle">Baião Completo</h3>
+                    <p data-translate-key="baiaoCompletoDesc">Baião com carne de sol, queijo coalho e acompanhamentos da casa.</p>
                     <div class="price">R$ 47,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -185,10 +184,10 @@
                     <img src="assets/img/peixeAsado.png" alt="Peixe Assado">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Peixe Assado</h3>
-                    <p>Peixe fresco assado com ervas, servido com arroz e salada.</p>
+                    <h3 data-translate-key="peixeAssadoTitle">Peixe Assado</h3>
+                    <p data-translate-key="peixeAssadoDesc">Peixe fresco assado com ervas, servido com arroz e salada.</p>
                     <div class="price">R$ 52,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -198,10 +197,10 @@
                     <img src="assets/img/bolinhoBacalhau.png" alt="Bolinho de Bacalhau">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Bolinho de Bacalhau</h3>
-                    <p>Clássico bolinho crocante por fora e macio por dentro.</p>
+                    <h3 data-translate-key="bolinhoBacalhauTitle">Bolinho de Bacalhau</h3>
+                    <p data-translate-key="bolinhoBacalhauDesc">Clássico bolinho crocante por fora e macio por dentro.</p>
                     <div class="price">R$ 19,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -210,10 +209,10 @@
                     <img src="assets/img/escondidinho.png" alt="Escondidinho de Carne Seca">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Escondidinho</h3>
-                    <p>Creme de mandioca com recheio de carne seca desfiada e gratinada.</p>
+                    <h3 data-translate-key="escondidinhoTitle">Escondidinho</h3>
+                    <p data-translate-key="escondidinhoDesc">Creme de mandioca com recheio de carne seca desfiada e gratinada.</p>
                     <div class="price">R$ 28,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -222,10 +221,10 @@
                     <img src="assets/img/miniTapioca.png" alt="Mini Tapiocas">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Mini Tapiocas</h3>
-                    <p>Tapiocas pequenas recheadas com queijo coalho e carne seca.</p>
+                    <h3 data-translate-key="miniTapiocasTitle">Mini Tapiocas</h3>
+                    <p data-translate-key="miniTapiocasDesc">Tapiocas pequenas recheadas com queijo coalho e carne seca.</p>
                     <div class="price">R$ 15,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
             <div class="menu-item" data-category="sobremesas">
@@ -233,10 +232,10 @@
                     <img src="assets/img/cocadaCremosa.png" alt="Cocada Cremosa">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Cocada Cremosa</h3>
-                    <p>Cocada preparada com coco fresco e toque de leite condensado.</p>
+                    <h3 data-translate-key="cocadaCremosaTitle">Cocada Cremosa</h3>
+                    <p data-translate-key="cocadaCremosaDesc">Cocada preparada com coco fresco e toque de leite condensado.</p>
                     <div class="price">R$ 12,90</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -245,10 +244,10 @@
                     <img src="assets/img/quindim.png" alt="Quindim">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Quindim</h3>
-                    <p>Doce de gema e coco com textura aveludada e brilho característico.</p>
+                    <h3 data-translate-key="quindimTitle">Quindim</h3>
+                    <p data-translate-key="quindimDesc">Doce de gema e coco com textura aveludada e brilho característico.</p>
                     <div class="price">R$ 9,50</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -258,10 +257,10 @@
                     <img src="assets/img/caldoCana.png" alt="Caldo de Cana">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Caldo de Cana</h3>
-                    <p>Suco de cana natural, gelado e refrescante.</p>
+                    <h3 data-translate-key="caldoCanaTitle">Caldo de Cana</h3>
+                    <p data-translate-key="caldoCanaDesc">Suco de cana natural, gelado e refrescante.</p>
                     <div class="price">R$ 6,50</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -270,10 +269,10 @@
                     <img src="assets/img/batidaCoco.png" alt="Batida de Coco">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Batida de Coco</h3>
-                    <p>Bebida cremosa à base de coco ideal para acompanhar sobremesas.</p>
+                    <h3 data-translate-key="batidaCocoTitle">Batida de Coco</h3>
+                    <p data-translate-key="batidaCocoDesc">Bebida cremosa à base de coco ideal para acompanhar sobremesas.</p>
                     <div class="price">R$ 12,50</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -282,10 +281,10 @@
                     <img src="assets/img/cafeRapadura.png" alt="Café com Rapadura">
                 </div>
                 <div class="menu-item-content">
-                    <h3>Café com Rapadura</h3>
-                    <p>Café coado com rapadura derretida — toque doce típico.</p>
+                    <h3 data-translate-key="cafeRapaduraTitle">Café com Rapadura</h3>
+                    <p data-translate-key="cafeRapaduraDesc">Café coado com rapadura derretida — toque doce típico.</p>
                     <div class="price">R$ 7,50</div>
-                    <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                    <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                 </div>
             </div>
 
@@ -294,7 +293,7 @@
     </section>
 
     <section class="carousel">
-        <h2 class="section-title">Pratos em Destaque</h2>
+        <h2 class="section-title" data-translate-key="featuredDishesTitle">Pratos em Destaque</h2>
         <div class="carousel-container">
             <button class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
             <div class="carousel-track-wrapper">
@@ -305,7 +304,7 @@
                             <h3>Baião de Dois</h3>
                             <p>Arroz e feijão verde cozidos com queijo coalho e carne seca.</p>
                             <div class="price">R$ 42,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -315,7 +314,7 @@
                             <h3>Carne de Sol com Macaxeira</h3>
                             <p>Carne de sol acebolada e macaxeira cozida com manteiga de garrafa.</p>
                             <div class="price">R$ 48,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -326,7 +325,7 @@
                             <h3>Pastel de Carne Seca</h3>
                             <p>Pastel crocante recheado com carne seca temperada.</p>
                             <div class="price">R$ 18,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -336,7 +335,7 @@
                             <h3>Pudim de Leite</h3>
                             <p>Pudim cremoso com calda de caramelo.</p>
                             <div class="price">R$ 14,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -346,7 +345,7 @@
                             <h3>Suco de Limão</h3>
                             <p>Suco natural, refrescante e levemente adoçado.</p>
                             <div class="price">R$ 9,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -356,7 +355,7 @@
                             <h3>Moqueca de Peixe</h3>
                             <p>Peixe cozido no leite de coco, azeite de dendê e coentro.</p>
                             <div class="price">R$ 56,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -366,7 +365,7 @@
                             <h3>Prato Especial</h3>
                             <p>Seleção especial do chef com ingredientes da estação.</p>
                             <div class="price">R$ 49,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -376,7 +375,7 @@
                             <h3>Acarajé</h3>
                             <p>Bolinho de feijão-fradinho frito, recheado com vatapá e camarão.</p>
                             <div class="price">R$ 12,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -386,7 +385,7 @@
                             <h3>Sarapatel</h3>
                             <p>Prato tradicional nordestino com miúdos e temperos especiais.</p>
                             <div class="price">R$ 45,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -397,7 +396,7 @@
                             <h3>Xinxim de Galinha</h3>
                             <p>Frango com castanhas, amendoim e temperos nordestinos.</p>
                             <div class="price">R$ 49,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -408,7 +407,7 @@
                             <h3>Camarão na Moranga</h3>
                             <p>Camarões cremosos em molho, servidos dentro da moranga assada.</p>
                             <div class="price">R$ 68,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
 
@@ -418,7 +417,7 @@
                             <h3>Arrumadinho</h3>
                             <p>Feijão-de-corda com carne de sol, farofa e vinagrete.</p>
                             <div class="price">R$ 38,90</div>
-                            <button class="btn add-to-cart">Adicionar ao carrinho</button>
+                            <button class="btn add-to-cart" data-translate-key="addToCartBtn">Adicionar ao carrinho</button>
                         </div>
                     </li>
                 </ul>
@@ -429,7 +428,7 @@
     </section>
 
     <section id="galeria" class="gallery">
-        <h2 class="section-title">Nossa Galeria</h2>
+        <h2 class="section-title" data-translate-key="galleryTitle">Nossa Galeria</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
@@ -482,28 +481,28 @@
     </section>
 
     <div class="botao-reserva">
-        <a href="reserva.html" class="btn-reserva">Faça sua reserva</a>
+        <a href="reserva.html" class="btn-reserva" data-translate-key="floatingReservationBtn">Faça sua reserva</a>
     </div>
 
     <section id="contato" class="contact">
-        <h2 class="section-title">Entre em Contato</h2>
+        <h2 class="section-title" data-translate-key="contactTitle">Entre em Contato</h2>
         <div class="contact-container">
             <div class="contact-info">
-                <h3>Informações</h3>
+                <h3 data-translate-key="contactInfoTitle">Informações</h3>
                 <div class="contact-item">
-                    <h4>Endereço</h4>
+                    <h4 data-translate-key="contactAddressTitle">Endereço</h4>
                     <p>🏠 Rua Avenida Nazaré, 1800 - Ipiranga, São Paulo - SP <br>&nbsp; &nbsp; &nbsp; CEP: 04260-000</p>
                 </div>
                 <div class="contact-item">
-                    <h4>Telefone</h4>
+                    <h4 data-translate-key="contactPhoneTitle">Telefone</h4>
                     <p>📞 (81) 3456-7890</p>
                 </div>
                 <div class="contact-item">
-                    <h4>Horário de Funcionamento</h4>
-                    <p>📅 Segunda a Sábado: 🕑 11h às 22h<br>📅 Domingo: 🕑 11h às 17h</p>
+                    <h4 data-translate-key="contactHoursTitle">Horário de Funcionamento</h4>
+                    <p data-translate-key="contactHoursText">📅 Segunda a Sábado: 🕑 11h às 22h<br>📅 Domingo: 🕑 11h às 17h</p>
                 </div>
                 <div class="contact-item">
-                    <h4>Redes Sociais</h4>
+                    <h4 data-translate-key="contactSocialTitle">Redes Sociais</h4>
                     <div class="social-links">
                         <a href="#" class="social-link">
                             <img src="assets/icon/iconInsta.png" alt="Instagram" class="social-icon">
@@ -529,7 +528,7 @@
     </section>
 
     <section class="testimonials">
-        <h2 class="section-title">Depoimentos de Clientes</h2>
+        <h2 class="section-title" data-translate-key="testimonialsTitle">Depoimentos de Clientes</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-header">
@@ -540,7 +539,7 @@
                         <p class="rating">★★★★★</p>
                     </div>
                 </div>
-                <p class="testimonial-text">"Que experiência incrível! Os pratos são autênticos e deliciosos. A Moqueca
+                <p class="testimonial-text" data-translate-key="testimonial1">"Que experiência incrível! Os pratos são autênticos e deliciosos. A Moqueca
                     de Peixe foi espetacular, com sabores que me transportaram ao litoral nordestino!"</p>
             </div>
 
@@ -553,7 +552,7 @@
                         <p class="rating">★★★★★</p>
                     </div>
                 </div>
-                <p class="testimonial-text">"O melhor restaurante nordestino que já visitei! O Baião de Dois é
+                <p class="testimonial-text" data-translate-key="testimonial2">"O melhor restaurante nordestino que já visitei! O Baião de Dois é
                     irresistível, e o atendimento é atencioso e caloroso. Voltarei com certeza!"</p>
             </div>
 
@@ -566,7 +565,7 @@
                         <p class="rating">★★★★★</p>
                     </div>
                 </div>
-                <p class="testimonial-text">"Simplesmente maravilhoso! Cada prato é uma obra de arte culinária. O Carne
+                <p class="testimonial-text" data-translate-key="testimonial3">"Simplesmente maravilhoso! Cada prato é uma obra de arte culinária. O Carne
                     de Sol com Macaxeira derreteu na boca. Recomendo para todos!"</p>
             </div>
 
@@ -579,7 +578,7 @@
                         <p class="rating">★★★★★</p>
                     </div>
                 </div>
-                <p class="testimonial-text">"Fantástico! O ambiente aconchegante e a comida de qualidade fazem deste um
+                <p class="testimonial-text" data-translate-key="testimonial4">"Fantástico! O ambiente aconchegante e a comida de qualidade fazem deste um
                     lugar perfeito. Voltei 3 vezes em um mês!"</p>
             </div>
 
@@ -592,7 +591,7 @@
                         <p class="rating">★★★★★</p>
                     </div>
                 </div>
-                <p class="testimonial-text">"Que lugar especial! Os sabores autênticos da culinária nordestina foram uma
+                <p class="testimonial-text" data-translate-key="testimonial5">"Que lugar especial! Os sabores autênticos da culinária nordestina foram uma
                     verdadeira descoberta. Toda a família amou!"</p>
             </div>
         </div>
@@ -606,7 +605,7 @@
                     <img src="assets/logo/logoFieldColorU10.png" alt="Logo field">
                 </div>
 
-                <div class="footer-text-center">
+                <div class="footer-text-center" data-translate-key="footerText">
                     Cozinha de Histórias é um projeto que celebra a rica culinária nordestina, trazendo o sabor e a
                     tradição de volta à mesa.
                 </div>
@@ -617,14 +616,14 @@
             </div>
             <hr>
             <section class="container-footer-link">
-                <div class="footer-logo">Cozinha de Histórias</div>
-                <p>O verdadeiro sabor da comida nordestina caseira</p>
+                <div class="footer-logo" data-translate-key="navBrand">Cozinha de Histórias</div>
+                <p data-translate-key="footerTagline">O verdadeiro sabor da comida nordestina caseira</p>
                 <div class="footer-links">
-                    <a href="#inicio">Início</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#cardapio">Cardápio</a>
-                    <a href="#galeria">Galeria</a>
-                    <a href="#contato">Contato</a>
+                    <a href="#inicio" data-translate-key="navHome">Início</a>
+                    <a href="#sobre" data-translate-key="navAbout">Sobre</a>
+                    <a href="#cardapio" data-translate-key="navMenu">Cardápio</a>
+                    <a href="#galeria" data-translate-key="navGallery">Galeria</a>
+                    <a href="#contato" data-translate-key="navContact">Contato</a>
                 </div>
                 <div class="container-footer-contact-item">
                     <div class="social-links">
@@ -645,7 +644,7 @@
             </section>
             <hr>
             <div class="copyright">
-                &copy; 2025 Cozinha de Histórias. Todos os direitos reservados.
+                <span data-translate-key="footerCopyright">&copy; 2025 Cozinha de Histórias. Todos os direitos reservados.</span>
             </div>
         </div>
     </footer>
@@ -659,19 +658,20 @@
         </button>
         <div class="accessibility-dropdown" id="accessibilityDropdown">
             <div class="accessibility-group">
-                <label>Idioma / Language:</label>
+                <label data-translate-key="accessibilityLang">Idioma / Language:</label>
                 <button onclick="changeLanguage('pt')" class="lang-btn">Português</button>
                 <button onclick="changeLanguage('en')" class="lang-btn">English</button>
                 <button onclick="changeLanguage('es')" class="lang-btn">Español</button>
             </div>
             <div class="accessibility-group">
-                <label>Tema / Theme:</label>
-                <button onclick="toggleDarkMode()" class="theme-btn" id="themeBtn">🌙 Modo Escuro</button>
+                <label data-translate-key="accessibilityTheme">Tema / Theme:</label>
+                <button onclick="toggleDarkMode()" class="theme-btn" id="themeBtn" data-translate-key="accessibilityDarkMode">🌙 Modo Escuro</button>
             </div>
         </div>
     </div>
 
     <script src="app.js"></script>
+    <script src="translations.js"></script>
 </body>
 
 </html>

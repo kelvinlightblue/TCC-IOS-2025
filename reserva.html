@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faça sua Reserva - Cozinha de Histórias</title>
+    <title data-translate-key="pageTitleReservation">Faça sua Reserva - Cozinha de Histórias</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page-key="pageTitleReservation">
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo-nav"> 
                 <img src="assets/logo/logoCozinhaColorU20.png" alt="Logo Cozinha de Histórias">
-                <span>Cozinha de Histórias</span> 
+                <span data-translate-key="navBrand">Cozinha de Histórias</span> 
             </a>
             <ul class="nav-links">
-                <li><a href="index.html#inicio">Início</a></li>
-                <li><a href="index.html#sobre">Sobre</a></li>
-                <li><a href="index.html#cardapio">Cardápio</a></li>
-                <li><a href="index.html#galeria">Galeria</a></li>
-                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="index.html#inicio" data-translate-key="navHome">Início</a></li>
+                <li><a href="index.html#sobre" data-translate-key="navAbout">Sobre</a></li>
+                <li><a href="index.html#cardapio" data-translate-key="navMenu">Cardápio</a></li>
+                <li><a href="index.html#galeria" data-translate-key="navGallery">Galeria</a></li>
+                <li><a href="index.html#contato" data-translate-key="navContact">Contato</a></li>
             </ul>
             <div class="mobile-menu-icon">
                 <button onclick="menuShow()"><img class="icon" src="assets/icon/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="icon menu"></button>
@@ -26,57 +26,57 @@
         </div>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="index.html#inicio" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="index.html#sobre" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="index.html#cardapio" class="nav-link">Cardápio</a></li>
-                <li class="nav-item"><a href="index.html#galeria" class="nav-link">Galeria</a></li>
-                <li class="nav-item"><a href="index.html#contato" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="index.html#inicio" class="nav-link" data-translate-key="navHome">Início</a></li>
+                <li class="nav-item"><a href="index.html#sobre" class="nav-link" data-translate-key="navAbout">Sobre</a></li>
+                <li class="nav-item"><a href="index.html#cardapio" class="nav-link" data-translate-key="navMenu">Cardápio</a></li>
+                <li class="nav-item"><a href="index.html#galeria" class="nav-link" data-translate-key="navGallery">Galeria</a></li>
+                <li class="nav-item"><a href="index.html#contato" class="nav-link" data-translate-key="navContact">Contato</a></li>
             </ul>
             <div class="login-button">
-                <button><a href="carrinho.html">Carrinho</a></button>
+                <button><a href="carrinho.html" data-translate-key="navCart">Carrinho</a></button>
             </div>
             <div class="login-button">
-                <button><a href="reserva.html">Reservar</a></button>
+                <button><a href="reserva.html" data-translate-key="navReserve">Reservar</a></button>
             </div>
         </div>
     </nav>
 
     <main class="page">
         <section class="container-carrinho-compras">
-            <h1>Faça sua Reserva</h1>
+            <h1 data-translate-key="reservationTitle">Faça sua Reserva</h1>
         </section>
         <section class="container-formulario">
             <div class="contact-form">
                 <form class="reservation-form" id="reservation-form">
                     <div class="form-group">
-                        <label for="name">Nome Completo</label>
+                        <label for="name" data-translate-key="formFullName">Nome Completo</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">E-mail</label>
+                        <label for="email" data-translate-key="formEmail">E-mail</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Telefone</label>
+                        <label for="phone" data-translate-key="formPhone">Telefone</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="date">Data</label>
+                        <label for="date" data-translate-key="formDate">Data</label>
                         <input type="date" id="date" name="date" required>
                     </div>
                     <div class="form-group">
-                        <label for="time">Horário</label>
+                        <label for="time" data-translate-key="formTime">Horário</label>
                         <input type="time" id="time" name="time" required>
                     </div>
                     <div class="form-group">
-                        <label for="guests">Número de Pessoas</label>
+                        <label for="guests" data-translate-key="formGuests">Número de Pessoas</label>
                         <input type="number" id="guests" name="guests" min="1" max="20" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Mensagem (Opcional)</label>
+                        <label for="message" data-translate-key="formMessage">Mensagem (Opcional)</label>
                         <textarea id="message" name="message" rows="4"></textarea>
                     </div>
-                    <button type="submit" class="btn">Enviar Reserva</button>
+                    <button type="submit" class="btn" data-translate-key="formSubmitBtn">Enviar Reserva</button>
                 </form>
             <div id="confirmation" aria-live="polite"></div>
             </div>
@@ -88,9 +88,11 @@
             const form = document.getElementById('reservation-form');
             const confirmationEl = document.getElementById('confirmation');
 
-            function showConfirmation(name, guests, date, time) {
-                confirmationEl.innerHTML = `\n                    <div class="reservation-confirmation" role="status">\n                        <strong>Reserva recebida!</strong> Obrigado, ${name}.\n                        Reserva para <strong>${guests}</strong> pessoa(s) em <strong>${date}</strong> às <strong>${time}</strong>.\n                    </div>`;
-                // remove after 5s
+            function showConfirmation(name, guests, date, time) { 
+                const lang = localStorage.getItem('language') || 'pt';
+                let message = translations[lang].reservationConfirmMsg.replace('{name}', name).replace('{guests}', guests).replace('{date}', date).replace('{time}', time);
+
+                confirmationEl.innerHTML = `<div class="reservation-confirmation" role="status">${message}</div>`;
                 setTimeout(() => { confirmationEl.innerHTML = ''; }, 5000);
             }
 
@@ -106,8 +108,9 @@
                     const guests = form.querySelector('#guests')?.value || '';
 
                     if (!name || !email || !phone || !date || !time || !guests) {
-                        // simple validation
-                        confirmationEl.innerHTML = '<div class="reservation-error">Por favor, preencha todos os campos obrigatórios.</div>';
+                        const lang = localStorage.getItem('language') || 'pt';
+                        const errorMessage = translations[lang].reservationErrorMsg;
+                        confirmationEl.innerHTML = `<div class="reservation-error">${errorMessage}</div>`;
                         setTimeout(() => { confirmationEl.innerHTML = ''; }, 3000);
                         return;
                     }
@@ -127,7 +130,7 @@
                     <img src="assets/logo/logoFieldColorU10.png" alt="Logo field"> 
                 </div>
 
-                <div class="footer-text-center">
+                <div class="footer-text-center" data-translate-key="footerText">
                     Cozinha de Histórias é um projeto que celebra a rica culinária nordestina, trazendo o sabor e a tradição de volta à mesa.
                 </div>
 
@@ -137,14 +140,14 @@
             </div>
             <hr>
             <section class="container-footer-link">
-                <div class="footer-logo">Cozinha de Histórias</div>
-                <p>O verdadeiro sabor da comida nordestina caseira</p>
+                <div class="footer-logo" data-translate-key="navBrand">Cozinha de Histórias</div>
+                <p data-translate-key="footerTagline">O verdadeiro sabor da comida nordestina caseira</p>
                 <div class="footer-links">
-                    <a href="index.html#inicio">Início</a>
-                    <a href="index.html#sobre">Sobre</a>
-                    <a href="index.html#cardapio">Cardápio</a>
-                    <a href="index.html#galeria">Galeria</a>
-                    <a href="index.html#contato">Contato</a>
+                    <a href="index.html#inicio" data-translate-key="navHome">Início</a>
+                    <a href="index.html#sobre" data-translate-key="navAbout">Sobre</a>
+                    <a href="index.html#cardapio" data-translate-key="navMenu">Cardápio</a>
+                    <a href="index.html#galeria" data-translate-key="navGallery">Galeria</a>
+                    <a href="index.html#contato" data-translate-key="navContact">Contato</a>
                 </div>
                 <div class="container-footer-contact-item">
                     <div class="social-links">
@@ -165,11 +168,12 @@
             </section>
             <hr>
             <div class="copyright">
-                &copy; 2025 Cozinha de Histórias. Todos os direitos reservados.
+                <span data-translate-key="footerCopyright">&copy; 2025 Cozinha de Histórias. Todos os direitos reservados.</span>
             </div>
         </div>
     </footer>
     <script src="app.js"></script>
+    <script src="translations.js"></script>
 </body>
 
 </html>
