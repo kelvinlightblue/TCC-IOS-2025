@@ -3,6 +3,7 @@ const translations = {
         // Geral & Navegação
         pageTitleIndex: "Cozinha de Histórias | Restaurante Nordestino",
         pageTitleCart: "Carrinho - Cozinha de Histórias",
+        pageTitleDocs: "Documentação - Cozinha de Histórias",
         pageTitleReservation: "Faça sua Reserva - Cozinha de Histórias",
         navBrand: "Cozinha de Histórias",
         navHome: "Início",
@@ -92,6 +93,7 @@ const translations = {
         // Footer
         footerText: "Cozinha de Histórias é um projeto que celebra a rica culinária nordestina, trazendo o sabor e a tradição de volta à mesa.",
         footerTagline: "O verdadeiro sabor da comida nordestina caseira",
+        footerDocsLink: "Documentação",
         footerCopyright: "&copy; 2025 Cozinha de Histórias. Todos os direitos reservados.",
 
         // Acessibilidade
@@ -123,11 +125,25 @@ const translations = {
         paymentPix: "PIX",
         paymentCard: "Cartão de Crédito",
         finalizePurchaseBtn: "Finalizar Compra",
+
+        // Página de Documentação
+        docsTitle: "Documentação do Site",
+        docsPrivacyTitle: "Política de Privacidade",
+        docsPrivacyText: "Nossa política de privacidade visa garantir a segurança e a confidencialidade das informações de nossos clientes. Os dados coletados, como nome e e-mail para reservas, são utilizados exclusivamente para a finalidade a que se destinam e não são compartilhados com terceiros.",
+        docsDataSecurityTitle: "Manipulação Segura de Informações",
+        docsDataSecurityText: "Todas as informações dos clientes são armazenadas em um ambiente seguro e acessadas apenas por pessoal autorizado. Utilizamos práticas de segurança para proteger contra acesso, alteração ou destruição não autorizada dos seus dados.",
+        docsCookiesTitle: "Uso de Cookies",
+        docsCookiesText: "Nosso site utiliza cookies para melhorar a experiência do usuário, como manter o idioma de sua preferência e os itens no carrinho de compras. Os cookies não armazenam informações pessoais identificáveis.",
+        docsCreatorsTitle: "Sobre os Criadores: FIELD",
+        docsCreatorsText: "Este site foi desenvolvido pela FIELD, uma empresa de tecnologia com foco em criar experiências digitais que realmente conectam negócios e clientes. Nosso objetivo é transformar ideias em soluções digitais eficientes e memoráveis.",
+        docsRightsTitle: "Direitos do Restaurante",
+        docsRightsText: "O nome \"Cozinha de Histórias\", seu logotipo, e todas as receitas e imagens apresentadas neste site são de propriedade intelectual de sua idealizadora, Dona Maria, e protegidos por lei. A reprodução não autorizada de qualquer conteúdo é estritamente proibida.",
     },
     en: {
         // General & Navigation
         pageTitleIndex: "Cozinha de Histórias | Northeastern Restaurant",
         pageTitleCart: "Shopping Cart - Cozinha de Histórias",
+        pageTitleDocs: "Documentation - Cozinha de Histórias",
         pageTitleReservation: "Make your Reservation - Cozinha de Histórias",
         navBrand: "Cozinha de Histórias",
         navHome: "Home",
@@ -217,6 +233,7 @@ const translations = {
         // Footer
         footerText: "Cozinha de Histórias is a project that celebrates the rich northeastern cuisine, bringing the flavor and tradition back to the table.",
         footerTagline: "The true taste of homemade northeastern food",
+        footerDocsLink: "Documentation",
         footerCopyright: "&copy; 2025 Cozinha de Histórias. All rights reserved.",
 
         // Accessibility
@@ -248,11 +265,25 @@ const translations = {
         paymentPix: "PIX",
         paymentCard: "Credit Card",
         finalizePurchaseBtn: "Finalize Purchase",
+
+        // Documentation Page
+        docsTitle: "Site Documentation",
+        docsPrivacyTitle: "Privacy Policy",
+        docsPrivacyText: "Our privacy policy aims to ensure the security and confidentiality of our customers' information. The data collected, such as name and email for reservations, is used exclusively for its intended purpose and is not shared with third parties.",
+        docsDataSecurityTitle: "Secure Information Handling",
+        docsDataSecurityText: "All customer information is stored in a secure environment and accessed only by authorized personnel. We use security practices to protect against unauthorized access, alteration, or destruction of your data.",
+        docsCookiesTitle: "Use of Cookies",
+        docsCookiesText: "Our site uses cookies to improve the user experience, such as maintaining your preferred language and items in the shopping cart. Cookies do not store personally identifiable information.",
+        docsCreatorsTitle: "About the Creators: FIELD",
+        docsCreatorsText: "This website was developed by FIELD, a technology company focused on creating digital experiences that truly connect businesses and customers. Our goal is to transform ideas into efficient and memorable digital solutions.",
+        docsRightsTitle: "Restaurant Rights",
+        docsRightsText: "The name \"Cozinha de Histórias\", its logo, and all recipes and images presented on this site are the intellectual property of its creator, Dona Maria, and are protected by law. Unauthorized reproduction of any content is strictly prohibited.",
     },
     es: {
         // General y Navegación
         pageTitleIndex: "Cozinha de Histórias | Restaurante Nordestino",
         pageTitleCart: "Carrito - Cozinha de Histórias",
+        pageTitleDocs: "Documentación - Cozinha de Histórias",
         pageTitleReservation: "Haga su Reserva - Cozinha de Histórias",
         navBrand: "Cozinha de Histórias",
         navHome: "Inicio",
@@ -342,6 +373,7 @@ const translations = {
         // Pie de página
         footerText: "Cozinha de Histórias es un proyecto que celebra la rica cocina nordestina, devolviendo el sabor y la tradición a la mesa.",
         footerTagline: "El verdadero sabor de la comida casera del nordeste",
+        footerDocsLink: "Documentación",
         footerCopyright: "&copy; 2025 Cozinha de Histórias. Todos los derechos reservados.",
 
         // Accesibilidad
@@ -373,6 +405,19 @@ const translations = {
         paymentPix: "PIX",
         paymentCard: "Tarjeta de Crédito",
         finalizePurchaseBtn: "Finalizar Compra",
+
+        // Página de Documentación
+        docsTitle: "Documentación del Sitio",
+        docsPrivacyTitle: "Política de Privacidad",
+        docsPrivacyText: "Nuestra política de privacidad tiene como objetivo garantizar la seguridad y confidencialidad de la información de nuestros clientes. Los datos recopilados, como el nombre y el correo electrónico para las reservas, se utilizan exclusivamente para el propósito previsto y no se comparten con terceros.",
+        docsDataSecurityTitle: "Manejo Seguro de la Información",
+        docsDataSecurityText: "Toda la información del cliente se almacena en un entorno seguro y solo el personal autorizado puede acceder a ella. Utilizamos prácticas de seguridad para proteger sus datos contra el acceso, la alteración o la destrucción no autorizados.",
+        docsCookiesTitle: "Uso de Cookies",
+        docsCookiesText: "Nuestro sitio utiliza cookies para mejorar la experiencia del usuario, como mantener su idioma preferido y los artículos en el carrito de compras. Las cookies no almacenan información de identificación personal.",
+        docsCreatorsTitle: "Sobre los Creadores: FIELD",
+        docsCreatorsText: "Este sitio web fue desarrollado por FIELD, una empresa de tecnología enfocada en crear experiencias digitales que realmente conectan a empresas y clientes. Nuestro objetivo es transformar ideas en soluciones digitales eficientes y memorables.",
+        docsRightsTitle: "Derechos del Restaurante",
+        docsRightsText: "El nombre \"Cozinha de Histórias\", su logotipo y todas las recetas e imágenes presentadas en este sitio son propiedad intelectual de su creadora, Dona Maria, y están protegidos por la ley. La reproducción no autorizada de cualquier contenido está estrictamente prohibida.",
     }
 };
 
