@@ -102,6 +102,8 @@ function renderPaymentFields() {
             <input class="payment-input" id="card-exp" placeholder="MM/AA">
             <label>CVV</label>
             <input class="payment-input" id="card-cvv" placeholder="123">
+            <label>Endereço</label>
+            <input class="payment-input" id="card-end" placeholder="Endereço">
         `;
     }
 }
